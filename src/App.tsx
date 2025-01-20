@@ -53,7 +53,7 @@ const App: React.FC = () => {
 
   const stopEdit = () => {
     setEditing(-1);
-    setForm({});
+    setForm({ available: true });
   }
 
   return (
@@ -77,7 +77,7 @@ const App: React.FC = () => {
                     <td className="border border-gray-300 p-2">
                       <input
                         type="text"
-                        placeholder="Title"
+                        placeholder="Název"
                         value={form.title || ""}
                         onChange={(e) => setForm({ ...form, title: e.target.value })}
                         className="w-full"
@@ -86,7 +86,7 @@ const App: React.FC = () => {
                     <td className="border border-gray-300 p-2">
                       <input
                         type="text"
-                        placeholder="Author"
+                        placeholder="Autor"
                         value={form.author || ""}
                         onChange={(e) => setForm({ ...form, author: e.target.value })}
                         className="w-full"
@@ -95,7 +95,7 @@ const App: React.FC = () => {
                     <td className="border border-gray-300 p-2">
                       <input
                         type="number"
-                        placeholder="Year"
+                        placeholder="Rok"
                         value={form.year || ""}
                         onChange={(e) => setForm({ ...form, year: parseInt(e.target.value) })}
                         className="w-full"
@@ -134,7 +134,7 @@ const App: React.FC = () => {
                 <td className="border border-gray-300 p-2">
                   <input
                     type="text"
-                    placeholder="Title"
+                    placeholder="Název"
                     value={form.title || ""}
                     onChange={(e) => setForm({ ...form, title: e.target.value })}
                     className="w-full"
@@ -143,7 +143,7 @@ const App: React.FC = () => {
                 <td className="border border-gray-300 p-2">
                   <input
                     type="text"
-                    placeholder="Author"
+                    placeholder="Autor"
                     value={form.author || ""}
                     onChange={(e) => setForm({ ...form, author: e.target.value })}
                     className="w-full"
@@ -152,7 +152,7 @@ const App: React.FC = () => {
                 <td className="border border-gray-300 p-2">
                   <input
                     type="number"
-                    placeholder="Year"
+                    placeholder="Rok"
                     value={form.year || ""}
                     onChange={(e) => setForm({ ...form, year: parseInt(e.target.value) })}
                     className="w-full"
